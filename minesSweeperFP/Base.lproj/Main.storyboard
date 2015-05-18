@@ -1,25 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="wzX-3W-rYf">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LEG-Pm-WBf" customClass="ViewController" customModule="minesSweeperFP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="gGd-je-3B1"/>
+                        <viewControllerLayoutGuide type="bottom" id="QFN-aZ-Drk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="EyX-wn-YZk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uD2-NL-NEb">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hps-7n-SJO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Minessweeper" id="2RZ-03-qa7"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APM-3v-2J3">
+                                <rect key="frame" x="150" y="121" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZB-LV-J3K">
+                                <rect key="frame" x="408" y="121" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxB-VI-DX2">
+                                <rect key="frame" x="262" y="458" width="76" height="30"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGameClicked:" destination="LEG-Pm-WBf" eventType="touchUpInside" id="2uH-XY-igk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="uD2-NL-NEb" secondAttribute="centerX" id="8aR-j8-0JN"/>
+                            <constraint firstItem="uD2-NL-NEb" firstAttribute="leading" secondItem="APM-3v-2J3" secondAttribute="trailing" constant="-42" id="Phb-iy-aGJ"/>
+                            <constraint firstAttribute="centerX" secondItem="Hps-7n-SJO" secondAttribute="centerX" id="QgK-Wi-8XA"/>
+                            <constraint firstItem="Hps-7n-SJO" firstAttribute="top" secondItem="EyX-wn-YZk" secondAttribute="topMargin" id="RXc-JI-4gM"/>
+                            <constraint firstItem="QZB-LV-J3K" firstAttribute="top" secondItem="Hps-7n-SJO" secondAttribute="bottom" constant="77" id="TA5-3z-hPA"/>
+                            <constraint firstAttribute="centerX" secondItem="hxB-VI-DX2" secondAttribute="centerX" id="WPx-Z5-bYp"/>
+                            <constraint firstItem="APM-3v-2J3" firstAttribute="top" secondItem="Hps-7n-SJO" secondAttribute="bottom" constant="77" id="cBD-PY-mEb"/>
+                            <constraint firstItem="QZB-LV-J3K" firstAttribute="leading" secondItem="uD2-NL-NEb" secondAttribute="trailing" constant="-42" id="fOo-0V-kiE"/>
+                            <constraint firstItem="hxB-VI-DX2" firstAttribute="top" secondItem="uD2-NL-NEb" secondAttribute="bottom" constant="8" id="iFx-FS-Kbz"/>
+                            <constraint firstAttribute="centerY" secondItem="uD2-NL-NEb" secondAttribute="centerY" id="kzV-RM-fiL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="MSView" destination="uD2-NL-NEb" id="SwO-0W-fMF"/>
+                        <outlet property="sweptUpLabel" destination="APM-3v-2J3" id="8tS-7u-48T"/>
+                        <outlet property="timeLabel" destination="QZB-LV-J3K" id="cWW-DX-0cU"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q7C-zu-tpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1221" y="464"/>
         </scene>
     </scenes>
 </document>
